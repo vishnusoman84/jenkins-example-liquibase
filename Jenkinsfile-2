@@ -8,12 +8,12 @@ pipeline {
   stages {
     stage('Status') {
       steps {
-        sh 'liquibase status --url="jdbc:derby://localhost:1527/sample" --changeLogFile=master-changelog.xml --username=liquibase --password=liquibase,
+        sh 'liquibase status --url="jdbc:derby://192.168.1.105:1527/sample" --changeLogFile=master-changelog.xml --username=$MARIADB_CREDS_USR --password=$MARIADB_CREDS_PSW'
       }
     }
     stage('Update') {
       steps {
-        sh 'liquibase update --url="jdbc:derby://localhost:1527/sample" --changeLogFile=master-changelog.xml --username=liquibase --password=liquibase,      }
+        sh 'liquibase update --url="jdbc:derby://192.168.1.105:1527/sample" --changeLogFile=master-changelog.xml --username=$MARIADB_CREDS_USR --password=$MARIADB_CREDS_PSW'      }
     }
   }
   post {
