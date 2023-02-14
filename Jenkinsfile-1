@@ -1,10 +1,9 @@
 pipeline {
-  agent any {
-     { image 'liquibase/liquibase:4.4.2' }
-  }
+
   stages {
     stage('Test') {
       steps {
+       { image 'liquibase/liquibase:4.4.2' }
         sh 'liquibase --version'
       }
     }
