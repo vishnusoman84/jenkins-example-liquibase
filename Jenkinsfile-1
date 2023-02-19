@@ -1,8 +1,7 @@
 pipeline {
   agent any {
    
-  // { image 'liquibase/liquibase:4.4.2' }
-   {docker run 'liquibase/liquibase:4.4.2' }
+sh 'java --version'
   
   }
   stages {
