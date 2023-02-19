@@ -1,9 +1,5 @@
 pipeline {
-  agent any {
-   
-sh 'java --version'
-  
-  }
+
   stages {
     stage('Test') {
       steps {
