@@ -1,6 +1,6 @@
 pipeline {
   agent {
-    agent1 { image 'liquibase/liquibase:4.4.2' }
+    linux { image 'liquibase/liquibase:4.4.2' }
   }
   stages {
     stage('Test') {
