@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                { image 'liquibase/liquibase:4.4.2' }
+               docker run hello-world;
             }
         }
     }
