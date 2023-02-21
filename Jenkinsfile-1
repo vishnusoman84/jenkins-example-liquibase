@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                sh 'sudo docker pull liquibase/liquibase:4.19.0'
+                sh 'liquibase --version'
             }
         }
     }
