@@ -4,17 +4,10 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-               sh 'docker --version'
+                sh 'liquibase --version'
             }
         }
     }
     
-      stages {
-    stage('Test') {
-      steps {
-        sh 'liquibase --version'
-      }
-    }
-  }
     
 }
